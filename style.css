@@ -1,0 +1,151 @@
+:root {
+    --bg: #07d2c7;
+    --text: black;
+    --grey-color: rgb(51, 51, 51);
+    --space: 0.5rem;
+    --font: 1rem;
+    --btn-size: 3rem;
+}
+
+@media (min-width: 360px) {
+    :root {
+        --space: 1rem;
+        --font: 1rem;
+        --btn-size: 3.8rem;
+    }
+}
+
+@media (min-width: 750px) {
+    :root {
+        --space: 1rem;
+        --font: 1.02rem;
+        --btn-size: 4rem;
+    }
+}
+
+
+body {
+        background-color: var(--bg);
+        color: var(--text);
+        font-family: Arial;
+        height: 45rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+body.dark {
+    --bg: black;
+    --text: white;
+    
+}
+
+.hero {
+    width: 100%;
+    max-width: 350px;
+}
+
+.heading-css {
+    /* background-color: thistle; */
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+}
+
+.cals-name {
+    font-size: calc(var(--font) * 1.9);
+    padding-left: 1rem;
+}
+
+.github-logo {
+    margin-left: calc(var(--space) * 5);
+    /* background-color: aliceblue; */
+}
+
+.logo-img {
+    width: 25px;
+}
+
+.logo-btn {
+    width: 35px;
+    border: none;
+    background-color: transparent;
+    border-radius: 5%;
+}
+
+.dark-mode-css {
+    margin-left: 1.5rem;
+    /* background-color: brown; */
+}
+
+
+.buttons-containar {
+    /* background-color: blanchedalmond; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: var(--space);
+    padding: var(--space);
+    justify-content: center;
+    
+}
+
+.calculation-buttons {
+    height: var(--btn-size);
+    width: var(--btn-size);
+    font-size: calc(var(--font) * 1.5);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* used in dark mode */
+.gray-button {
+    /* background-color:rgb(51, 51, 51); */
+    background-color: var(--grey-color);
+    color: white;
+}
+
+.gray-button:hover {
+    background-color: rgb(101, 101, 101);
+    
+}
+
+/* used in light mode */
+.gray-button-updated {
+    background-color: white;
+    color: black;
+}
+
+.gray-button-updated:hover {
+    background-color: black;
+    color: white;
+}
+
+.orange-button{
+    background-color: orange;
+    color: white;
+}
+
+.clear-button{
+    font-size: var(--font);
+}
+
+.result-css{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    font-size: calc(var(--font) * 1.5);
+    padding: 1rem;
+    padding-left: 2rem;
+    border-radius: 3rem; 
+}
+
+.result-gray {
+    background-color: var(--grey-color);
+    color: white;
+}
+
+.result-white {
+    background-color: white;
+    color: black;
+}

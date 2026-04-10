@@ -1,0 +1,23 @@
+{
+  "name": "calculator-project",
+  "version": "1.0.0",
+  "description": "A simple and clean Responsive Calculator. It handles basic math operations, has a dark/light mode toggle, and includes clear + delete buttons. Built with a neat layout and smooth interaction to keep it easy and pleasant to use.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabari-555/Calculator-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sabari-555/Calculator-Project/issues"
+  },
+  "homepage": "https://github.com/sabari-555/Calculator-Project#readme",
+  "dependencies": {
+    "jest": "^30.3.0"
+  }
+}

@@ -137,7 +137,8 @@ body.dark {
     font-size: calc(var(--font) * 1.5);
     padding: 1rem;
     padding-left: 2rem;
-    border-radius: 3rem; 
+    border-radius: 3rem;
+    overflow: auto;
 }
 
 .result-gray {

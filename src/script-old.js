@@ -1,5 +1,6 @@
 let calculation = localStorage.getItem('Calculation') || '';
 displayCalculation();
+
 function updateCalculation(value) {
     calculation += value;
     localStorage.setItem('Calculation', calculation);
@@ -10,6 +11,7 @@ function displayCalculation() {
     document.querySelector(".display-result").innerHTML = calculation;
 }
 
+//light mode and dark mode
 function themeDelay() {
     setTimeout(() => {
         document.querySelector(".js-cals-name").innerHTML = "Calculator";
@@ -32,20 +34,20 @@ function toggleButton() {
 
     const modeImg = document.getElementById("theme-img");
     const jsCalsName = document.querySelector(".js-cals-name");
-    if(modeImg.getAttribute("src") === "Assets/sun.svg") {
-        modeImg.setAttribute("src", "Assets/moon.svg");
+    if(modeImg.getAttribute("src") === "../Assets/sun.svg") {
+        modeImg.setAttribute("src", "../Assets/moon.svg");
         jsCalsName.innerHTML = `<p style="font-size: 1.5rem;">Light Mode \u{1F31E}</p>`;
     } else {
-        modeImg.setAttribute("src", "Assets/sun.svg");
+        modeImg.setAttribute("src", "../Assets/sun.svg");
         jsCalsName.innerHTML = `<p style="font-size: 1.5rem;">Dark Mode \u{1F319}</p>`;;
     }
 
     const gitImg = document.getElementById("github-img");
 
-    if(gitImg.getAttribute("src") === "Assets/github-white.svg") {
-        gitImg.setAttribute("src", "Assets/github.svg");
+    if(gitImg.getAttribute("src") === "../Assets/github-white.svg") {
+        gitImg.setAttribute("src", "../Assets/github.svg");
     } else {
-        gitImg.setAttribute("src", "Assets/github-white.svg");
+        gitImg.setAttribute("src", "../Assets/github-white.svg");
     }
 
 }

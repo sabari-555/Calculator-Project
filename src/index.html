@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <link rel="icon" type="image/x-icon" href="Assets/icons8-calculator-16.png">
-    <link rel="stylesheet" href="style.css"></link>
+    <link rel="icon" type="image/x-icon" href="../Assets/icons8-calculator-16.png">
+    <link rel="stylesheet" href="../styles/style.css"></link>
 
 </head>
 
@@ -16,12 +16,12 @@
             <p class="cals-name js-cals-name">Calculator</p>
             <div class="github-logo">
                 <button class="logo-btn">
-                    <img id="github-img" class="logo-img" src="Assets/github-white.svg">
+                    <img id="github-img" class="logo-img" src="../Assets/github-white.svg" alt="github-icon">
                 </button>
             </div>  
             <div class="dark-mode-css">
-                <button class="logo-btn" onclick="themeDelay()">
-                    <img id="theme-img" class="logo-img" src="Assets/sun.svg" alt="theme-icon">
+                <button class="logo-btn js-theme-delay">
+                    <img id="theme-img" class="logo-img" src="../Assets/sun.svg" alt="theme-icon">
                 </button>
             </div>
         </div>
@@ -34,85 +34,72 @@
             </button>
             
 
-            <button class="calculation-buttons gray-button js-cals-button" onclick="
-                updateCalculation('1')
-                ">1
+            <button class="calculation-buttons gray-button js-cals-button" data-value="1"
+                >1
             </button>
 
-            <button class="calculation-buttons gray-button js-cals-button" onclick="
-                updateCalculation('2')
-                ">2
+            <button class="calculation-buttons gray-button js-cals-button" data-value="2"
+                >2
             </button>
 
-            <button class="calculation-buttons gray-button js-cals-button" onclick="
-                updateCalculation('3')
-                ">3
+            <button class="calculation-buttons gray-button js-cals-button" data-value="3"
+                >3
             </button>
 
-            <button class="calculation-buttons orange-button" onclick="
-                updateCalculation('+')
-                ">+
+            <button class="calculation-buttons orange-button js-cals-button" data-value="+"
+                >+
             </button>
 
-            <button class="calculation-buttons gray-button js-cals-button" onclick="
-                updateCalculation('4')
-                ">4
+            <button class="calculation-buttons gray-button js-cals-button" data-value="4"
+                >4
             </button>
 
-            <button class="calculation-buttons gray-button js-cals-button" onclick="
-                updateCalculation('5')
-                ">5
+            <button class="calculation-buttons gray-button js-cals-button" data-value="5"
+                >5
             </button>
 
-            <button class="calculation-buttons gray-button js-cals-button" onclick="
-                updateCalculation('6')
-                ">6</button>
+            <button class="calculation-buttons gray-button js-cals-button" data-value="6"
+                >6
+            </button>
 
-            <button class="calculation-buttons orange-button" onclick="
-                updateCalculation('-')
-                ">-</button>
+            <button class="calculation-buttons orange-button js-cals-button" data-value="-"
+                >-
+            </button>
             
-
-             <button class="calculation-buttons gray-button js-cals-button" onclick="
-                updateCalculation('7')
-                ">7
+             <button class="calculation-buttons gray-button js-cals-button" data-value="7"
+                >7
             </button>
 
-            <button class="calculation-buttons gray-button js-cals-button" onclick="
-                updateCalculation('8')
-                ">8</button>
-
-            <button class="calculation-buttons gray-button js-cals-button" onclick="
-                updateCalculation('9')
-                ">9
+            <button class="calculation-buttons gray-button js-cals-button" data-value="8"
+                >8
             </button>
 
-            <button class="calculation-buttons orange-button" onclick="
-                updateCalculation('*')
-                ">*
+            <button class="calculation-buttons gray-button js-cals-button" data-value="9"
+                >9
             </button>
 
-            <button class="calculation-buttons gray-button js-cals-button" onclick="
-                updateCalculation('0')
-                ">0
+            <button class="calculation-buttons orange-button js-cals-button" data-value="*"
+                >*
             </button>
 
-            <button class="calculation-buttons gray-button js-cals-button" onclick="
-                updateCalculation('.')
-                ">.
+            <button class="calculation-buttons gray-button js-cals-button" data-value="0"
+                >0
             </button>
 
-            <button class="calculation-buttons gray-button js-cals-button equalto-js-btn" >
-                =
+            <button class="calculation-buttons gray-button js-cals-button" data-value="."
+                >.
             </button>
 
-            <button class="calculation-buttons orange-button" onclick="
-                updateCalculation('/')
-                ">/
+            <button class="calculation-buttons gray-button equalto-js-btn"
+                >=
             </button>
 
-            <button class="calculation-buttons gray-button js-cals-button clear-button js-clear-btn">
-                Clear
+            <button class="calculation-buttons orange-button js-cals-button" data-value="/"
+                >/
+            </button>
+
+            <button class="calculation-buttons gray-button js-cals-button clear-button js-clear-btn"
+                >Clear
             </button>
 
         </div>
@@ -123,8 +110,7 @@
 
     </div>
     
-
-    <script src="script.js"></script>
+    <script type="module" src="../script/core/calculator.js"></script>
 </body>
 
 </html>

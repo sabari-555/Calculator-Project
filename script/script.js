@@ -1,0 +1,75 @@
+import { appendValue, evaluateExpression, clear, deleteLast } from "./core/calculator.js";
+import { displayCalculation, themeDelay } from "./ui/display.js";
+import { load, save } from "./services/storage.js";
+
+let calculation = load();
+displayCalculation(calculation);
+
+document.querySelectorAll(".js-cals-button").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const value = btn.dataset.value;
+        calculation = appendValue(calculation, value);
+        save(calculation);
+        displayCalculation(calculation);
+    })
+})
+
+//code for equalTo button
+document.querySelector(".equalto-js-btn").addEventListener("click", () => {
+    calculation = evaluateExpression(calculation);
+    displayCalculation(calculation);
+    save(calculation);
+})
+
+//code for clear button
+document.querySelector(".js-clear-btn").addEventListener("click", () => {
+    calculation = clear();
+    save(calculation);
+    displayCalculation(calculation);
+})
+
+//code for delete button
+document.querySelector(".js-delete-btn").addEventListener("click", () => {
+    calculation = deleteLast(calculation);
+    save(calculation);
+    displayCalculation(calculation);
+})
+
+//theme
+document.querySelector(".js-theme-delay").addEventListener("click", () => {
+    themeDelay();
+})
+
+//keyboard event
+/*
+function keysEvent() {
+    let value = keyBoardEvents();
+    calculation = appendValue(calculation, value);
+    save(calculation);
+    displayCalculation(calculation);
+}
+*/
+
+document.addEventListener("keydown", (event) => {
+    switch(event.key) {
+        case '1': case '2' : case '3': case '4': case '5':
+        case '6': case '7' : case '8': case '9': case '0':
+        case '+': case '-' : case '*': case '/': case '.':
+            calculation = appendValue(calculation, event.key);
+            displayCalculation(calculation);
+            console.log(calculation);
+            break;
+        
+        case 'Backspace':
+            calculation = deleteLast(calculation);
+            displayCalculation(calculation);
+            break;
+        case 'Enter':
+            calculation = evaluateExpression(calculation);
+            displayCalculation(calculation);
+            break;
+        default:
+            //break the condition if no one match
+            break;
+    }
+})

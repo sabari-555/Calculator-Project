@@ -1,6 +1,9 @@
 import { appendValue, evaluateExpression, clear, deleteLast } from "./core/calculator.js";
 import { displayCalculation, themeDelay } from "./ui/display.js";
 import { load, save } from "./services/storage.js";
+/*import * as calculator from './core/calculator.js';
+import * as display from './ui/display.js';
+import * as storage from './services/storage.js';*/
 
 let calculation = load();
 displayCalculation(calculation);
@@ -9,8 +12,8 @@ document.querySelectorAll(".js-cals-button").forEach(btn => {
     btn.addEventListener("click", () => {
         const value = btn.dataset.value;
         calculation = appendValue(calculation, value);
-        save(calculation);
         displayCalculation(calculation);
+        save(calculation);
     })
 })
 
@@ -24,15 +27,15 @@ document.querySelector(".equalto-js-btn").addEventListener("click", () => {
 //code for clear button
 document.querySelector(".js-clear-btn").addEventListener("click", () => {
     calculation = clear();
-    save(calculation);
     displayCalculation(calculation);
+    save(calculation);
 })
 
 //code for delete button
 document.querySelector(".js-delete-btn").addEventListener("click", () => {
     calculation = deleteLast(calculation);
-    save(calculation);
     displayCalculation(calculation);
+    save(calculation);
 })
 
 //theme

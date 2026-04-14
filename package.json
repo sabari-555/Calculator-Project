@@ -19,5 +19,9 @@
   "homepage": "https://github.com/sabari-555/Calculator-Project#readme",
   "dependencies": {
     "jest": "^30.3.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.29.2",
+    "babel-jest": "^30.3.0"
   }
 }

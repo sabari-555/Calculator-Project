@@ -21,7 +21,8 @@ document.querySelectorAll(".js-cals-button").forEach(btn => {
 
 //code for equalTo button
 document.querySelector(".equalto-js-btn").addEventListener("click", () => {
-    calculation = evaluateExpression(calculation).toString();
+    let updatedValue = evaluateExpression(calculation);
+    calculation = updatedValue.toString();
     displayCalculation(calculation);
     save(calculation);
 })

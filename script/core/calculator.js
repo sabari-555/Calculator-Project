@@ -3,6 +3,9 @@ function isOperator(char) {
 }
 
 export function appendValue(current, value) {
+    if(typeof current !== "string"){
+        current = "";
+    }
     let lastValue = current[current.length - 1];
     if(isOperator(value)) {
         if(isOperator(lastValue)) {
@@ -12,11 +15,8 @@ export function appendValue(current, value) {
     return current + value;
 }
 
-function sum(a, b) {
-    return a+b;
-}
-
 export function evaluateExpression(expression) {
+
     let lastValue = expression[expression.length - 1];
     if(isOperator(lastValue)) {
         expression = expression.slice(0, -1);
@@ -25,7 +25,7 @@ export function evaluateExpression(expression) {
     try {
         return Function(`return ${expression}`)();
     } catch{
-        return 'Error';
+        return 'Error! clear and use';
     }
 }
 
